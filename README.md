@@ -35,7 +35,7 @@ It was originally made for a Mario Sports challenge, which has since been comple
 
 ## Running in Your Own Environment
 
-If you prefer to run Dolphin Shuffler from source rather than using the provided executable, follow these steps:
+If you prefer to run Dolphin Shuffler from source rather than using the provided executable, follow these steps. Otherwise, skip to *Setup Instructions* to configure and use the Shuffler.
 
 1. **Clone the Repository:**
    ```bash
