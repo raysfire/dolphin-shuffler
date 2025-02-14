@@ -1,0 +1,14 @@
+# Virtual environments
+.venv/
+venv/
+
+# Build artifacts from PyInstaller
+build/
+dist/
+
+# PyInstaller spec file (optional - exclude if not needed)
+*.spec
+
+# Python cache files
+__pycache__/
+*.py[cod]
