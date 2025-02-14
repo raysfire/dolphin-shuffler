@@ -31,6 +31,7 @@ It was originally made for a Mario Sports challenge, which has since been comple
 
 - **Dolphin Emulator:** [Download Dolphin](https://dolphin-emu.org/)
     - Most versions of Dolphin should work, but this was originally tested on *Dolphin 5.0-20347*.
+    - Update: This is now tested and verified to work on the current version, *Dolphin 2421*.
 - **Windows Operating System:** Dolphin Shuffler is designed for Windows.
 - **(Optional) OBS Studio:** [Download OBS Studio](https://obsproject.com/) and make sure WebSockets are enabled.
 - **Python 3.6+** (if running the script manually; an executable is also provided).
@@ -157,7 +158,7 @@ If you plan to stream or record with OBS:
 - **Window Switching Issues:**
   Windows is very particular about allowing programs to be made active, so this is a common issue and unrelated to the code. I'll look into alternatives, but I've done as good of a job as possible to keep this from happening.
 - **Window Resizing Issues:**
-  Sometimes a window might be resized when set to active. Usually this only happens once, and by simply resizing it, every subsequent switch back should retain the size. I'll look into this further.
+  Sometimes a window might be resized when set to active. Usually this only happens once when the program first shuffles, and by simply resizing it then, every subsequent switch back should retain the size. I'll look into this further if I have time.
 - **Other Issues:**  
   Check the console output for error messages and refer to the repository's [Issues](https://github.com/raysfire/dolphin-shuffler/issues) section for support.
 
