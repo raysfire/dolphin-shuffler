@@ -55,6 +55,7 @@ If you prefer to run Dolphin Shuffler from source rather than using the provided
      python3 -m venv .venv
      source .venv/bin/activate
      ```
+     *If running on macOS/Linux, code will likely need to be modified. This program uses libraries meant to handle window focus made specifically for Windows. As of now, macOS/Linux aren't officially supported.*
 
 3. **Install Dependencies:**
    With the virtual environment activated (or using your system Python), install the required packages:
