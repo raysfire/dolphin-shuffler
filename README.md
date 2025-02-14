@@ -7,8 +7,8 @@ It was originally made for a Mario Sports challenge, which has since been comple
 ## Table of Contents
 
 - [Features](#features)
-- [Running in Your Own Environment](#running-in-your-own-environment)
 - [Requirements](#requirements)
+- [Running in Your Own Environment](#running-in-your-own-environment)
 - [Setup Instructions](#setup-instructions)
   - [Dolphin Emulator Setup](#dolphin-emulator-setup)
   - [OBS Integration (Optional)](#obs-integration-optional)
@@ -24,6 +24,14 @@ It was originally made for a Mario Sports challenge, which has since been comple
 - **OBS Integration:** Optionally control OBS sources to show only the active game.
 - **Text Exports:** Optionally export a list of active games and a count to text files (usable as OBS text sources).
 - **User-Friendly Configuration:** All settings (including hotkeys and game names) are controlled via a single, commented `config.ini` file.
+
+## Requirements
+
+- **Dolphin Emulator:** [Download Dolphin](https://dolphin-emu.org/)
+    - Most versions of Dolphin should work, but this was originally tested on *Dolphin 5.0-20347*.
+- **Windows Operating System:** Dolphin Shuffler is designed for Windows.
+- **(Optional) OBS Studio:** [Download OBS Studio](https://obsproject.com/) and make sure WebSockets are enabled.
+- **Python 3.6+** (if running the script manually; an executable is also provided).
 
 ## Running in Your Own Environment
 
@@ -67,14 +75,6 @@ If you prefer to run Dolphin Shuffler from source rather than using the provided
    - **OBS Integration:** Toggle OBS integration, set the OBS scene name, port, and password.
    - **Hotkeys:** Change keys for pause, start, mark-as-complete, and undo actions.
    - **Games:** Add or remove games (ensure each game name matches its corresponding Dolphin window title exactly).
-
-## Requirements
-
-- **Dolphin Emulator:** [Download Dolphin](https://dolphin-emu.org/)
-    - Most versions of Dolphin should work, but this was originally tested on *Dolphin 5.0-20347*.
-- **Windows Operating System:** Dolphin Shuffler is designed for Windows.
-- **(Optional) OBS Studio:** [Download OBS Studio](https://obsproject.com/) and make sure WebSockets are enabled.
-- **Python 3.6+** (if running the script manually; an executable is also provided).
 
 ## Setup Instructions
 
