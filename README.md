@@ -2,6 +2,8 @@
 
 **Dolphin Shuffler** is a tool that randomly switches between multiple Dolphin emulator windows so that only one game is active at a time. It takes advantage of Dolphin's **Pause on Focus Loss** feature to freeze inactive games, and it optionally integrates with OBS for streaming and recording.
 
+*Note: This was meant to shuffle between DIFFERENT games, not multiple instances of the same game. Attempting to shuffle to multiple instances of the same game will likely lead to unexpected behavior.*
+
 It was originally made for a Mario Sports challenge, which has since been completed. You can find a video on that [here](https://youtu.be/3JZnNCoOZkw).
 
 ## Table of Contents
