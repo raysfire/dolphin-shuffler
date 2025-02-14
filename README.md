@@ -7,6 +7,7 @@ It was originally made for a Mario Sports challenge, which has since been comple
 ## Table of Contents
 
 - [Features](#features)
+- [Running in Your Own Environment](#running-in-your-own-environment)
 - [Requirements](#requirements)
 - [Setup Instructions](#setup-instructions)
   - [Dolphin Emulator Setup](#dolphin-emulator-setup)
@@ -24,11 +25,53 @@ It was originally made for a Mario Sports challenge, which has since been comple
 - **Text Exports:** Optionally export a list of active games and a count to text files (usable as OBS text sources).
 - **User-Friendly Configuration:** All settings (including hotkeys and game names) are controlled via a single, commented `config.ini` file.
 
+## Running in Your Own Environment
+
+If you prefer to run Dolphin Shuffler from source rather than using the provided executable, follow these steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/raysfire/dolphin-shuffler.git
+   cd dolphin-shuffler
+   ```
+
+2. **Set Up a Virtual Environment (Recommended):**
+   Create a virtual environment to keep dependencies isolated:
+   - **On Windows:**
+     ```bash
+     python -m venv .venv
+     .venv\Scripts\activate
+     ```
+   - **On macOS/Linux:**
+     ```bash
+     python3 -m venv .venv
+     source .venv/bin/activate
+     ```
+
+3. **Install Dependencies:**
+   With the virtual environment activated (or using your system Python), install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Application:**
+   Once the dependencies are installed, launch the shuffler by running:
+   ```bash
+   python shuffler.py
+   ```
+   *Note:* If `config.ini` is not present, the program will automatically generate a default configuration file with comments.
+
+5. **Customize Settings (Optional):**
+   You can edit the generated `config.ini` file to adjust:
+   - **General:** Set minimum and maximum shuffle times.
+   - **OBS Integration:** Toggle OBS integration, set the OBS scene name, port, and password.
+   - **Hotkeys:** Change keys for pause, start, mark-as-complete, and undo actions.
+   - **Games:** Add or remove games (ensure each game name matches its corresponding Dolphin window title exactly).
+
 ## Requirements
 
 - **Dolphin Emulator:** [Download Dolphin](https://dolphin-emu.org/)
     - Most versions of Dolphin should work, but this was originally tested on *Dolphin 5.0-20347*.
-  *Note: Make sure Dolphin is configured to use "Pause on Focus Loss".*
 - **Windows Operating System:** Dolphin Shuffler is designed for Windows.
 - **(Optional) OBS Studio:** [Download OBS Studio](https://obsproject.com/) and make sure WebSockets are enabled.
 - **Python 3.6+** (if running the script manually; an executable is also provided).
