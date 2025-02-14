@@ -6,7 +6,7 @@ venv/
 build/
 dist/
 
-# PyInstaller spec file (optional - exclude if not needed)
+# PyInstaller spec file
 *.spec
 
 # Python cache files
