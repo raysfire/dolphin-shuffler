@@ -232,13 +232,13 @@ def bring_window_to_foreground(window_handle):
         if window.is_minimized():
             window.restore()
         window.set_focus()
-        print(f"Brought window with handle {window_handle} to the foreground.")
+        # print(f"Brought window with handle {window_handle} to the foreground.")
     except Exception as e:
         print(f"Failed to bring window to the foreground: {e}")
 
 def minimize_window(window_handle):
     win32gui.ShowWindow(window_handle, win32con.SW_MINIMIZE)
-    print(f"Minimized window with handle {window_handle} to ensure it loses focus.")
+    # print(f"Minimized window with handle {window_handle} to ensure it loses focus.")
 
 def get_dolphin_windows():
     windows = []
