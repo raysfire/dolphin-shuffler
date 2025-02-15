@@ -291,6 +291,7 @@ def main():
 
         # Filter active windows based on game status
         active_windows = [w for w in dolphin_windows if w[1] in [game for game, status in game_statuses if status]]
+        
         if len(active_windows) == 0:
             print("No active games remaining.")
             break
@@ -298,16 +299,35 @@ def main():
         # Choose a random active window (or the only one available)
         if len(active_windows) == 1:
             selected_window = active_windows[0]
+            selected_handle, selected_game = selected_window
+            
+            # If this is the first iteration or if the active game has changed, swap once.
+            if previous_window is None or selected_handle != previous_window[0]:
+                print(f"Only one active game remains: {selected_game}")
+                bring_window_to_foreground(selected_handle)
+                if previous_window:
+                    minimize_window(previous_window[0])
+                previous_window = selected_window
+
+            # Instead of re-swapping, just sleep and process key events.
+            time.sleep(0.1)
+            if mark_done:
+                mark_game_as_done(selected_game)
+                mark_done = False
+            if undo_done:
+                undo_last_completion()
+                undo_done = False
+            continue
         else:
             selected_window = random.choice(active_windows)
-
-        # Also ensure we pick from the overall windows list
-        selected_window = random.choice(dolphin_windows)
         selected_handle, selected_game = selected_window
 
-        # Prevent switching to the same window as before
-        if previous_window and selected_handle == previous_window[0]:
+        # Prevent switching to the same window as before only if there is more than one active game
+        if len(active_windows) > 1 and previous_window and selected_handle == previous_window[0]:
             continue
+
+        # Print the game name to indicate what will be swapped to
+        print(f"Swapping to: {selected_game}")
 
         # Bring the new window to the foreground first
         bring_window_to_foreground(selected_handle)
